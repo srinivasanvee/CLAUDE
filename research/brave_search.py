@@ -22,9 +22,8 @@ def brave_search(query: str, count: int = 5) -> str:
         Formatted string of search results with titles, descriptions, and URLs.
         Falls back to an error message if the API key is missing or request fails.
     """
-    #api_key = os.environ.get("BRAVE_API_KEY", "")
-    api_key = "BSA1AK6ycGp-9FJS5Q0k3a7qIZ39-Q7"
-
+    api_key = os.environ.get("BRAVE_API_KEY", "")
+    
     if not api_key:
         return (
             "[WARNING: BRAVE_API_KEY not set in .env — real-time search unavailable.]\n"
